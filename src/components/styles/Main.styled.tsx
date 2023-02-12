@@ -3,21 +3,19 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin 0;
   padding: 0;
-  font-size: 1.5rem;
-
-  @media (max-aspect-ratio: 2/1) {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  @media (min-aspect-ratio: 8/5) {
-    font-size: 2.5rem;
-    font-weight: 900;
-  }
-  
+  font-weight: 900;
   position: relative;
   width: 100vw;
   height: 100vh;
+  font-size: 1.5rem;
+
+  @media (min-width: 1024px) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -27,14 +25,17 @@ export const Container = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
+  width: 24rem;
+  height: 7rem;
 
-  @media (max-aspect-ratio: 2/1) {
-    width: 24rem;
+  @media (min-width: 1024px) {
+    width: 37rem;
+    height: 11rem;
   }
 
-  @media (min-aspect-ratio: 8/5) {
-    width: 37rem;
+  @media (min-width: 1280px) {
+    width: 50rem;
+    height: 15rem;
   }
 `;
 
@@ -43,20 +44,19 @@ export const Options = styled.div`
   padding: 0;
   witdh: 100%;
   display: inline-block;
-  height: 3rem;
+  height: 2rem;
+
+  @media (min-width: 1024px) {
+    height: 4rem;
+  }
+  @media (min-width: 1280px) {
+    height: 6rem;
+  }
   
   * {
     margin 0;
     padding: 0;
-    margin-right: 3rem;
-
-    @media (max-aspect-ratio: 2/1) {
-      margin-right: 2rem;
-    }
-
-    @media (min-aspect-ratio: 8/5) {
-      margin-right: 3rem;
-    }
+    margin-right: 4rem;
   }
 
   a {

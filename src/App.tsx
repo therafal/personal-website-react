@@ -6,6 +6,7 @@ import { ExtendedTheme } from './components/styles/themes';
 import GlobalStyle from "./components/styles/GlobalStyle";
 import Main from "./components/pages/Main";
 import NotFound from "./components/pages/NotFound";
+import About from './components/pages/About';
 
 export const themeContext = createContext<
   ((switchTheme: ExtendedTheme) => void) | null
@@ -48,7 +49,8 @@ function App() {
                     <div className="App">
                         <Routes>
                             <Route path="/" element={<Main />} />
-                            <Route path="404" element={<NotFound />} />
+                            <Route path="/about-me" element={<About />} />
+                            <Route path="/404" element={<NotFound />} />
                         </Routes>
                     </div>
                 </themeContext.Provider>

@@ -20,8 +20,8 @@ function Main() {
                     <Typer text="welcome" typerStarter={`[${theme.colors.primary}]root[/]@[${theme.colors.secondary}]therafal.dev[/]:~$ `} typingSpeed="225" />
                     {showOptions ? (
                         <Options>
-                            <a href="#">about-me</a>
-                            <a href="#">blog</a>
+                            <a href="/about-me">about-me</a>
+                            <a href="#">blog</a> 
                         </Options>
                     ) : (
                         <Options />
@@ -32,4 +32,4 @@ function Main() {
     )
 }
 
-export default Main
+export default Main;
