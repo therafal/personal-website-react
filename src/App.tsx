@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useEffect, useState } from 'react';
+import { ThemeProvider } from "styled-components";
+import { useTheme } from "./hooks/useTheme";
+import { ExtendedTheme } from './components/styles/themes';
+import GlobalStyle from "./components/styles/GlobalStyle";
+import Terminal from "./components/Terminal";
+
+export const themeContext = createContext<
+  ((switchTheme: ExtendedTheme) => void) | null
+>(null);
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {theme, themeLoaded, setMode} = useTheme();
+    const [selectedTheme, setSelectedTheme] = useState(theme);
+
+    useEffect(() => {
+        setSelectedTheme(theme);
+    }, [themeLoaded]);
+
+    useEffect(() => {
+        const themeColor = theme.colors?.body;
+    
+        const metaThemeColor = document.querySelector("meta[name='theme-color']");
+        const maskIcon = document.querySelector("link[rel='mask-icon']");
+        const metaMsTileColor = document.querySelector(
+          "meta[name='msapplication-TileColor']"
+        );
+    
+        metaThemeColor && metaThemeColor.setAttribute("content", themeColor);
+        metaMsTileColor && metaMsTileColor.setAttribute("content", themeColor);
+        maskIcon && maskIcon.setAttribute("color", themeColor);
+      }, [selectedTheme]);
+    
+      const themeSwitcher = (switchTheme: ExtendedTheme) => {
+        setSelectedTheme(switchTheme);
+        setMode(switchTheme);
+    };
+
+    return (
+        <>
+        {themeLoaded && (
+            <ThemeProvider theme={selectedTheme}>
+                <GlobalStyle />
+                <themeContext.Provider value={themeSwitcher}>
+                    <div className="App">
+                        <Terminal />
+                    </div>
+                </themeContext.Provider>
+            </ThemeProvider>
+        )}
+        </>
+    );
 }
 
 export default App;
