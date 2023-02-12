@@ -49,8 +49,8 @@ function App() {
                     <div className="App">
                         <Routes>
                             <Route path="/" element={<Main />} />
-                            <Route path="/about-me" element={<About />} />
-                            <Route path="/404" element={<NotFound />} />
+                            <Route path="about-me" element={<About />} />
+                            <Route path="404" element={<NotFound />} />
                         </Routes>
                     </div>
                 </themeContext.Provider>
