@@ -1,9 +1,13 @@
+import { NotFoundSVG } from "../styles/NotFound.styled";
+import { useTheme } from "../../hooks/useTheme";
+
 function NotFound() {
+    const {theme} = useTheme();
+
     return (
-        <div>
-            <h1>404</h1>
-            <p>Page not found</p>
-        </div>
+        <>
+            <NotFoundSVG theme={theme} />
+        </>
     );
 }
 
