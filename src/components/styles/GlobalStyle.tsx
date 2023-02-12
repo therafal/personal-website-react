@@ -23,7 +23,6 @@ const GlobalStyle = createGlobalStyle<{ theme: ExtendedTheme }>`
     display: block;
   }
   body {
-    font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
     background-color: ${({ theme }) => theme.colors?.body};
     color: ${({ theme }) => theme.colors?.text[100]};

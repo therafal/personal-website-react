@@ -17,6 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "styled-normalize": "^8.0.7",
@@ -50,6 +51,7 @@
   "proxy": "http://localhost:5000",
   "devDependencies": {
     "@types/lodash": "^4.14.191",
+    "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
     "vite": "^4.1.1",
     "workbox-build": "^6.5.4",

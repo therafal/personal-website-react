@@ -1,9 +1,11 @@
 import { createContext, useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from "styled-components";
 import { useTheme } from "./hooks/useTheme";
 import { ExtendedTheme } from './components/styles/themes';
 import GlobalStyle from "./components/styles/GlobalStyle";
-import Terminal from "./components/Terminal";
+import Main from "./components/pages/Main";
+import NotFound from "./components/pages/NotFound";
 
 export const themeContext = createContext<
   ((switchTheme: ExtendedTheme) => void) | null
@@ -44,7 +46,10 @@ function App() {
                 <GlobalStyle />
                 <themeContext.Provider value={themeSwitcher}>
                     <div className="App">
-                        <Terminal />
+                        <Routes>
+                            <Route path="/" element={<Main />} />
+                            <Route path="404" element={<NotFound />} />
+                        </Routes>
                     </div>
                 </themeContext.Provider>
             </ThemeProvider>

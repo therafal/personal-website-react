@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { TyperWrapper, Keyframes, TyperStarter, DisplayedText, Cursor } from './styles/Typer.styled'
 
 function Typer(props: any) {
-    const [text, setText] = useState<string>('');
+  const [text, setText] = useState<string>('');
   const [displayedText, setDisplayedText] = useState<string>('');
   const [typingSpeed] = useState<number>(props.typingSpeed ? props.typingSpeed : 150);
   const [cursor] = useState<string>(props.cursor ? props.cursor : '▌'); 
