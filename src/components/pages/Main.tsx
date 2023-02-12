@@ -10,7 +10,7 @@ function Main() {
     useEffect(() => {
         setTimeout(() => {
             setShowOptions(true);
-        }, 3000);
+        }, 1700);
     }, []);
 
     return (

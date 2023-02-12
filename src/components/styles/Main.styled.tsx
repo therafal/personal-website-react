@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin 0;
   padding: 0;
-  font-family: 'IBM Plex Mono', monospace;
   font-size: 1.5rem;
 
   @media (max-aspect-ratio: 2/1) {
@@ -28,6 +27,15 @@ export const Container = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: auto;
+
+  @media (max-aspect-ratio: 2/1) {
+    width: 24rem;
+  }
+
+  @media (min-aspect-ratio: 8/5) {
+    width: 37rem;
+  }
 `;
 
 export const Options = styled.div`
@@ -39,14 +47,15 @@ export const Options = styled.div`
   
   * {
     margin 0;
-    margin-right: 5rem;
+    padding: 0;
+    margin-right: 3rem;
 
     @media (max-aspect-ratio: 2/1) {
-      margin-right: 4rem;
+      margin-right: 2rem;
     }
 
     @media (min-aspect-ratio: 8/5) {
-      margin-right: 5rem;
+      margin-right: 3rem;
     }
   }
 
@@ -60,6 +69,7 @@ export const Options = styled.div`
 
   a:active {
     color: ${({ theme }) => theme.colors?.text[300]};
+    background-color: ${({ theme }) => theme.colors?.text[100]};
   }
 `;
 

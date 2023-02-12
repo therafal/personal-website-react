@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ExtendedTheme }>`
     border-width: 0;
     border-style: solid;
     border-color: theme('borderColor.DEFAULT', currentColor);
+    font-family: 'IBM Plex Mono', monospace;
   }
   blockquote, dl, dd, h1, h2, h3,
   h4, h5, h6, hr, figure, p, pre {
@@ -59,6 +60,16 @@ const GlobalStyle = createGlobalStyle<{ theme: ExtendedTheme }>`
     width: 1px;
     height: 1px;
     overflow: hidden;
+  }
+
+  ::-moz-selection { 
+    background: ${({ theme }) => theme.colors?.text[100]};
+    color: ${({ theme }) => theme.colors?.text[300]};
+  }
+
+  ::selection {
+    background: ${({ theme }) => theme.colors?.text[100]};
+    color: ${({ theme }) => theme.colors?.text[300]};
   }
 `;
 
