@@ -71,6 +71,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ExtendedTheme }>`
     background: ${({ theme }) => theme.colors?.text[100]};
     color: ${({ theme }) => theme.colors?.text[300]};
   }
+
+  a {
+    animation: none
+  }
 `;
 
 export default GlobalStyle;

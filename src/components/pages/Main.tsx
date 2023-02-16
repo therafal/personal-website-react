@@ -1,10 +1,4 @@
-import {
-  Wrapper,
-  Container,
-  Options,
-  Link,
-  BackButton,
-} from "../styles/Main.styled";
+import { Wrapper, Container, Options, Link } from "../styles/Main.styled";
 import { useState, useEffect } from "react";
 import Typer from "../Typer";
 import { useTheme } from "../../hooks/useTheme";

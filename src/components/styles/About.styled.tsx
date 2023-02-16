@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Title = styled.div`
+export const Title = styled.h1`
   font-weight: 900;
   margin: 2rem;
   padding: 0;
@@ -37,6 +37,8 @@ export const Title = styled.div`
 
 export const Text = styled.p`
     margin 2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
     padding: 0;
     color: ${({ theme }) => theme.colors?.text[100]};
     font-size: 1.5rem;
@@ -50,15 +52,40 @@ export const Text = styled.p`
 `;
 
 export const Link = styled.a`
-  color: ${({ theme }) => theme.colors?.text[100]};
-  font-weight: 900;
-  transition: 0.2s;
+    color: ${({ theme }) => theme.colors?.text[100]};
+    font-weight: 900;
+    transition: 0.2s;
+    animation: none
 
-  &:hover {
-    color: ${({ theme }) => theme.colors?.text[200]};
-  }
-  &:active {
-    color: ${({ theme }) => theme.colors?.text[300]};
-    background-color: ${({ theme }) => theme.colors?.text[100]};
-  }
+    &:hover {
+        color: ${({ theme }) => theme.colors?.text[200]};
+    }
+    &:active {
+        color: ${({ theme }) => theme.colors?.text[300]};
+        background-color: ${({ theme }) => theme.colors?.text[100]};
+    }
+`;
+
+export const GoBack = styled.a`
+    margin 2rem;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: ${({ theme }) => theme.colors?.text[100]};
+    font-weight: 900;
+    transition: 0.2s;
+    animation: none
+
+    &:hover {
+        color: ${({ theme }) => theme.colors?.text[200]};
+    }
+    &:active {
+        color: ${({ theme }) => theme.colors?.text[300]};
+        background-color: ${({ theme }) => theme.colors?.text[100]};
+    }
+`;
+
+export const Name = styled.span`
+  color: ${({ theme }) => theme.colors?.secondary};
 `;

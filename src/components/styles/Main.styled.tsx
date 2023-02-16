@@ -61,17 +61,18 @@ export const Options = styled.div`
 `;
 
 export const Link = styled.a`
-  color: ${({ theme }) => theme.colors?.text[100]};
-  font-weight: 900;
-  transition: 0.2s;
+    color: ${({ theme }) => theme.colors?.text[100]};
+    font-weight: 900;
+    transition: 0.2s;
+    animation: none
 
-  &:hover {
-    color: ${({ theme }) => theme.colors?.text[200]};
-  }
-  &:active {
-    color: ${({ theme }) => theme.colors?.text[300]};
-    background-color: ${({ theme }) => theme.colors?.text[100]};
-  }
+    &:hover {
+        color: ${({ theme }) => theme.colors?.text[200]};
+    }
+    &:active {
+        color: ${({ theme }) => theme.colors?.text[300]};
+        background-color: ${({ theme }) => theme.colors?.text[100]};
+    }
 `;
 
 export default Wrapper;
