@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   margin 0;
@@ -58,16 +58,17 @@ export const Options = styled.div`
     padding: 0;
     margin-right: 4rem;
   }
+`;
 
-  a {
-    color: ${({ theme }) => theme.colors?.text[100]};
-  }
+export const Link = styled.a`
+  color: ${({ theme }) => theme.colors?.text[100]};
+  font-weight: 900;
+  transition: 0.2s;
 
-  a:hover {
+  &:hover {
     color: ${({ theme }) => theme.colors?.text[200]};
   }
-
-  a:active {
+  &:active {
     color: ${({ theme }) => theme.colors?.text[300]};
     background-color: ${({ theme }) => theme.colors?.text[100]};
   }

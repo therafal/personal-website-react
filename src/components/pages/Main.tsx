@@ -1,4 +1,10 @@
-import { Wrapper, Container, Options } from "../styles/Main.styled";
+import {
+  Wrapper,
+  Container,
+  Options,
+  Link,
+  BackButton,
+} from "../styles/Main.styled";
 import { useState, useEffect } from "react";
 import Typer from "../Typer";
 import { useTheme } from "../../hooks/useTheme";
@@ -24,8 +30,8 @@ function Main() {
           />
           {showOptions ? (
             <Options>
-              <a href="/about-me">about-me</a>
-              <a href="#">blog</a>
+              <Link href="/about-me">about-me</Link>
+              <Link href="/blog">blog</Link>
             </Options>
           ) : (
             <Options />
