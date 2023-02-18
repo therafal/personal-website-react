@@ -66,7 +66,7 @@ export const Link = styled.a`
     }
 `;
 
-export const GoBack = styled.a`
+export const GoBack = styled.button`
     margin 2rem;
     vertical-align: bottom;
     position: absolute;
@@ -75,10 +75,13 @@ export const GoBack = styled.a`
     color: ${({ theme }) => theme.colors?.text[100]};
     font-weight: 900;
     transition: 0.2s;
-    animation: none
+    animation: none;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: underline;
 
     &:hover {
         color: ${({ theme }) => theme.colors?.text[200]};
+        background-color: rgba(0, 0, 0, 0);
     }
     &:active {
         color: ${({ theme }) => theme.colors?.text[300]};
@@ -89,3 +92,5 @@ export const GoBack = styled.a`
 export const Name = styled.span`
   color: ${({ theme }) => theme.colors?.secondary};
 `;
+
+export default Wrapper;

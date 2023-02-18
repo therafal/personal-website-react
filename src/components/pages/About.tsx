@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   Wrapper,
   Title,
@@ -8,16 +9,17 @@ import {
 } from "../styles/About.styled";
 
 function About() {
+  const navigate = useNavigate();
+
   return (
     <div className="about">
       <Wrapper>
         <Title>about-me</Title>
         <Text>
-          hey! my name is <Name>Rafał</Name> and i am a software developer from
-          Poland.
+          hey! my name is <Name>Rafał</Name> and i am a software developer.
         </Text>
         <Text>
-          i mainly work in web development. i am supporting <b>open-source</b>{" "}
+          i mainly work in web development. i support <b>open-source</b>
           projects and most of my work is available on{" "}
           <Link href="https://github.com/TheRafal" target="_blank">
             github
@@ -34,7 +36,7 @@ function About() {
           </Link>
           .
         </Text>
-        <GoBack href="javascript:window.history.back();">return</GoBack>
+        <GoBack onClick={() => navigate(-1)}>return</GoBack>
       </Wrapper>
     </div>
   );
