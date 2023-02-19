@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import {
   Wrapper,
   Title,
@@ -19,7 +19,7 @@ function About() {
           hey! my name is <Name>Rafał</Name> and i am a software developer.
         </Text>
         <Text>
-          i mainly work in web development. i support <b>open-source</b>
+          i mainly work in web development. i support <b>open-source</b>{" "}
           projects and most of my work is available on{" "}
           <Link href="https://github.com/TheRafal" target="_blank">
             github

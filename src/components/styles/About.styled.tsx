@@ -78,14 +78,17 @@ export const GoBack = styled.button`
     animation: none;
     background-color: rgba(0, 0, 0, 0);
     text-decoration: underline;
+    cursor: pointer;
 
     &:hover {
         color: ${({ theme }) => theme.colors?.text[200]};
         background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
     }
     &:active {
         color: ${({ theme }) => theme.colors?.text[300]};
         background-color: ${({ theme }) => theme.colors?.text[100]};
+        cursor: pointer;
     }
 `;
 
