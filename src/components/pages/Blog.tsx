@@ -1,6 +1,8 @@
-import { KeyboardEvent } from "react";
+import { KeyboardEvent, ReactComponentElement } from "react";
 import { useNavigate } from "react-router-dom";
 import { Wrapper, Input, Title, GoBack } from "../styles/Blog.styled";
+import { getPosts } from "../../utils/api";
+import Post from "../Post";
 
 function Blog() {
   const navigate = useNavigate();
@@ -21,6 +23,20 @@ function Blog() {
         break;
     }
   };
+
+  const posts = async () => {
+    const response = await getPosts();
+    return response;
+  };
+
+  const Posts = posts().then((posts) => {
+    let postList: ReactComponentElement<typeof Post>[] = [];
+    posts.map((post) => {
+      console.log(post.title);
+      postList.push(<Post title={post.title} createdAt={post.createdAt} />);
+    });
+    return postList;
+  });
 
   return (
     <div className="blog">
