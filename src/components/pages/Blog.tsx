@@ -24,20 +24,6 @@ function Blog() {
     }
   };
 
-  const posts = async () => {
-    const response = await getPosts();
-    return response;
-  };
-
-  const Posts = posts().then((posts) => {
-    let postList: ReactComponentElement<typeof Post>[] = [];
-    posts.map((post) => {
-      console.log(post.title);
-      postList.push(<Post title={post.title} createdAt={post.createdAt} />);
-    });
-    return postList;
-  });
-
   return (
     <div className="blog">
       <Wrapper>
