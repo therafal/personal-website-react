@@ -1,7 +1,7 @@
-import { Wrapper, Container, Options, Link } from "../styles/Main.styled";
+import { Wrapper, Container, Options, Link } from "./styles/Main.styled";
 import { useState, useEffect } from "react";
-import Typer from "../Typer";
-import { useTheme } from "../../hooks/useTheme";
+import Typer from "../components/Typer";
+import { useTheme } from "../hooks/useTheme";
 
 function Main() {
   const { theme } = useTheme();

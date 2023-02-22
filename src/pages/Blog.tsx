@@ -1,8 +1,6 @@
-import { KeyboardEvent, ReactComponentElement } from "react";
+import { KeyboardEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { Wrapper, Input, Title, GoBack } from "../styles/Blog.styled";
-import { getPosts } from "../../utils/api";
-import Post from "../Post";
+import { Wrapper, Input, Title, GoBack } from "./styles/Blog.styled";
 
 function Blog() {
   const navigate = useNavigate();

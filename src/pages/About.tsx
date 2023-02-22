@@ -6,7 +6,7 @@ import {
   Link,
   GoBack,
   Name,
-} from "../styles/About.styled";
+} from "./styles/About.styled";
 
 function About() {
   const navigate = useNavigate();
